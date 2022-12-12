@@ -17,17 +17,17 @@ key = os.environ.get('API_Key')
 g = Github(key)
 
 #repositório
-repo = g.get_repo("alanhassan/previsao_ligas_futebol")
+repo = g.get_repo("alanhassan/previsao_ligas")
 
 #get ml model from github
-url_ml = 'https://github.com/alanhassan/previsao_ligas_futebol/blob/main/best_lr_pipeline.pkl?raw=true'
+url_ml = 'https://github.com/alanhassan/previsao_ligas/blob/main/best_lr_pipeline.pkl?raw=true'
 
 file = BytesIO(requests.get(url_ml).content)
 ml = joblib.load(file)
 
 # updated database with recent matches from github
 
-url_df = 'https://github.com/alanhassan/previsao_ligas_futebol/blob/main/df_rolling.xlsx?raw=true'
+url_df = 'https://github.com/alanhassan/previsao_ligas/blob/main/df_rolling.xlsx?raw=true'
 data = requests.get(url_df).content
 df = pd.read_excel(data)
 
