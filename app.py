@@ -172,48 +172,6 @@ if submit_button:
     col4.metric(teams_away_choice, f'{((1 - prediction)*100).round(2)}%')
 
 
-
-
-
-
-    # If button is pressed
-#    if submit_button:
-#            
-#        # Get prediction
-#        prediction = ml.predict_proba(ratio(df, teams_home_choice, teams_away_choice))[0][1]
-#
-#        # Output prediction
-#        if prediction > 0.50:
-#            css_comp = """
-#            <style>
-#            [data-testid="stCaptionContainer"]{
-#                font-family: 'Cooper Black';
-#                color: #000000;
-#                font-size: 18px;
-#            }
-#            </style>
-#            """
-#            st.markdown(css_comp, unsafe_allow_html=True)
-#            st.caption(f'<p class="font3">The most likely winner is {teams_home_choice.upper()}, with a probability of {(prediction*100).round(2)}%</p>', unsafe_allow_html=True)
-#            image = Image.open(f'{teams_home_choice.lower().replace(" ", "_")}.png')
-#            centralize_image(image, caption='')
-#
-#        else:
-#            css_comp = """
-#            <style>
-#            [data-testid="stCaptionContainer"]{
-#                font-family: 'Cooper Black';
-#                color: #000000;
-#                font-size: 18px;
-#            }
-#            </style>
-#            """
-#            st.markdown(css_comp, unsafe_allow_html=True)
-#            st.caption(f'<p class="font4">The most likely winner is {teams_away_choice.upper()}, with a probability of {((1 - prediction)*100).round(2)}%</p>', unsafe_allow_html=True)
-#            image = Image.open(f'./teams/{teams_away_choice.lower().replace(" ", "_")}.png')
-#            centralize_image(image, caption='')
-
-
 home_FIFA_23_Overall = home(df, teams_home_choice)['FIFA_23_Overall'][0]
 home_points_last_season = home(df, teams_home_choice)['Points last season'][0]
 home_pont_rolling = home(df, teams_home_choice)['pont_rolling'][0]
