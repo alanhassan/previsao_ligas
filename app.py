@@ -141,9 +141,7 @@ with st.sidebar:
 
 
     last_date = str(df.date.max())[0:10]
-    #st.caption(""" <style> .font2 {                                          
-    #    font-size:18px ; font-family: 'Black'; color: #000000;} 
-    #    </style> """, unsafe_allow_html=True)
+
     css_updt = """
     <style>
     [class="font2"]{
@@ -184,25 +182,13 @@ away_pont_rolling = away(df, teams_away_choice)['pont_rolling'][0]
 away_gf_rolling = away(df, teams_away_choice)['gf_rolling'][0]
 away_ga_rolling = away(df, teams_away_choice)['ga_rolling'][0]
 
-css_info = """
-<style>
-[class="streamlit-expanderHeader st-ae st-dp st-ag st-ah st-ai st-aj st-bt st-dq st-cg st-dr st-ds st-dt st-du st-ar st-as st-b6 st-b5 st-b3 st-c2 st-cl st-dv st-b4 st-dw st-ci st-ck st-cj st-ch"]
-.st-ce{
-    background-color: whitesmoke;
-}
-.st-cg{
-    background-color: whitesmoke;
-} 
-</style>
-"""
-st.markdown(css_info, unsafe_allow_html=True)
+
 if submit_button:
     with st.expander("Click for more information"):
-        st.markdown(css_info, unsafe_allow_html=True)
         col1, col2 = st.columns(2)
-        col1.caption(f'{teams_home_choice} (last 3 home games)', unsafe_allow_html=True)
-        col2.caption(f'{teams_away_choice} (last 3 away games)', unsafe_allow_html=True)
 
+        col1.caption(f'{teams_home_choice} (last 3 home games)')
+        col2.caption(f'{teams_away_choice} (last 3 away games)')
         col1.text(f'FIFA 23 rating: {home_FIFA_23_Overall}')
         col1.text(f'Points last season: {home_points_last_season}')
         col1.text(f'Points: {home_pont_rolling}')
