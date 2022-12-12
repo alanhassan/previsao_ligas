@@ -1,0 +1,8 @@
+numpy==1.21.5
+joblib==1.1.0
+scikit-learn
+feature-engine==1.4.1
+PyGithub==1.57
+openpyxl
+beautifulsoup4
+lxml
