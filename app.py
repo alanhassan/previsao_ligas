@@ -111,7 +111,7 @@ blank, title_col, blank = st.columns([1,9,1])
 st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner?"}</h1>', unsafe_allow_html=True)
 #background: rgba(240, 240, 240, 0.4)
 #background-color:#0066cc
-add_bg_from_local('soccer_background6.jpg') 
+add_bg_from_local('background.jpg') 
 
 with st.sidebar:
     # texto
