@@ -110,7 +110,7 @@ def add_logo(logo_url: str):
                 background-image: url({logo_url});
                 background-repeat: no-repeat;
                 padding-top: 80px;
-                background-position: 40px 40px;
+                background-position: 80px 80px;
             }}
         </style>
         """,
