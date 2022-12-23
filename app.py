@@ -109,7 +109,7 @@ def add_logo(logo_url: str):
             [data-testid="stSidebar"] {{
                 background-image: url({logo_url});
                 background-repeat: no-repeat;
-                padding-top: 120px;
+                padding-top: 80px;
                 background-position: 20px 20px;
             }}
         </style>
