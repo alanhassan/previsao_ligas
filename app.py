@@ -102,6 +102,29 @@ def ratio(df, team1, team2):
                         "ga_rolling": "ga_rolling_ratio"}, inplace=True)
     return df
 
+def add_logo():
+    st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png);
+                background-repeat: no-repeat;
+                padding-top: 120px;
+                background-position: 20px 20px;
+            }
+            [data-testid="stSidebarNav"]::before {
+                content: "My Company Name";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 ########################################################################################
 st.set_page_config(layout="centered", page_icon=":soccer:", page_title="Predictions")
 
@@ -114,6 +137,9 @@ st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner
 add_bg_from_local('background.jpg') 
 
 with st.sidebar:
+    #logo
+    st.add_logo()
+
     # texto
     st.header('Select the options below:')
 
