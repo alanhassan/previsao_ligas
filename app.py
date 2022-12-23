@@ -106,7 +106,7 @@ def add_logo(logo_url: str):
     st.markdown(
         f"""
         <style>
-            [data-testid="stSidebarNav"] {{
+            [data-testid="stSidebar"] {{
                 background-image: url({logo_url});
                 background-repeat: no-repeat;
                 padding-top: 120px;
