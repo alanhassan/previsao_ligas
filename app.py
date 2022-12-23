@@ -141,7 +141,7 @@ add_logo()
 
 
 with st.sidebar:
-    
+    add_logo()
     # texto
     st.header('Select the options below:')
 
