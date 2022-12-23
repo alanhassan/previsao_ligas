@@ -138,7 +138,7 @@ add_bg_from_local('background.jpg')
 
 with st.sidebar:
     #logo
-    st.add_logo()
+    add_logo()
 
     # texto
     st.header('Select the options below:')
