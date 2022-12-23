@@ -102,17 +102,16 @@ def ratio(df, team1, team2):
                         "ga_rolling": "ga_rolling_ratio"}, inplace=True)
     return df
 
-def add_logo(logo_url: str):
-
+def add_logo():
     st.markdown(
-        f"""
+        """
         <style>
-            [data-testid="stSidebarNav"] {{
-                background-image: url({logo_url});
+            [data-testid="stSidebarNav"] {
+                background-image: url(http://placekitten.com/200/200);
                 background-repeat: no-repeat;
-                padding-top: 80px;
+                padding-top: 120px;
                 background-position: 20px 20px;
-            }}
+            }
         </style>
         """,
         unsafe_allow_html=True,
@@ -129,7 +128,7 @@ st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner
 #background: rgba(240, 240, 240, 0.4)
 #background-color:#0066cc
 add_bg_from_local('background.jpg') 
-add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png")
+add_logo()
 
 
 with st.sidebar:
