@@ -119,6 +119,7 @@ def add_logo(logo_url: str):
     )
 
 ########################################################################################
+
 st.set_page_config(layout="centered", page_icon=":soccer:", page_title="Predictions")
 
 blank, title_col, blank = st.columns([1,9,1])
@@ -128,11 +129,11 @@ st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner
 #background: rgba(240, 240, 240, 0.4)
 #background-color:#0066cc
 add_bg_from_local('background.jpg') 
+add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png")
+
 
 with st.sidebar:
-    #logo
-    add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png")
-
+    
     # texto
     st.header('Select the options below:')
 
