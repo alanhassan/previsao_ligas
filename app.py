@@ -107,13 +107,13 @@ def add_logo():
     st.markdown(
         """
         <style>
-            [data-testid="stSidebarNav"] {
+            [data-testid="stSidebar"] {
                 background-image: url(http://placekitten.com/200/200);
                 background-repeat: no-repeat;
                 padding-top: 120px;
                 background-position: 20px 20px;
             }
-            [data-testid="stSidebarNav"]::before {
+            [data-testid="stSidebar"]::before {
                 content: "Select the options below:";
                 margin-left: 20px;
                 margin-top: 20px;
