@@ -102,6 +102,7 @@ def ratio(df, team1, team2):
                         "ga_rolling": "ga_rolling_ratio"}, inplace=True)
     return df
 
+
 def add_logo():
     st.markdown(
         """
@@ -111,6 +112,14 @@ def add_logo():
                 background-repeat: no-repeat;
                 padding-top: 120px;
                 background-position: 20px 20px;
+            }
+            [data-testid="stSidebarNav"]::before {
+                content: "Select the options below:";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
             }
         </style>
         """,
@@ -132,7 +141,7 @@ add_logo()
 
 
 with st.sidebar:
-    add_logo()
+    
     # texto
     st.header('Select the options below:')
 
