@@ -102,24 +102,17 @@ def ratio(df, team1, team2):
                         "ga_rolling": "ga_rolling_ratio"}, inplace=True)
     return df
 
-def add_logo():
+def add_logo(logo_url: str):
+
     st.markdown(
-        """
+        f"""
         <style>
-            [data-testid="stSidebarNav"] {
-                background-image: url(https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png);
+            [data-testid="stSidebarNav"] {{
+                background-image: url({logo_url});
                 background-repeat: no-repeat;
-                padding-top: 120px;
+                padding-top: 80px;
                 background-position: 20px 20px;
-            }
-            [data-testid="stSidebarNav"]::before {
-                content: "My Company Name";
-                margin-left: 20px;
-                margin-top: 20px;
-                font-size: 30px;
-                position: relative;
-                top: 100px;
-            }
+            }}
         </style>
         """,
         unsafe_allow_html=True,
@@ -138,7 +131,7 @@ add_bg_from_local('background.jpg')
 
 with st.sidebar:
     #logo
-    add_logo()
+    add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png")
 
     # texto
     st.header('Select the options below:')
