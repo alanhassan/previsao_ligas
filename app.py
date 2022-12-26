@@ -128,7 +128,7 @@ st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner
 #background: rgba(240, 240, 240, 0.4)
 #background-color:#0066cc
 add_bg_from_local('background.jpg') 
-add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/seriea.png")
+add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/bundesliga.png")
 
 
 with st.sidebar:
@@ -179,6 +179,7 @@ with st.sidebar:
 if submit_button:
 
     prediction = ml.predict_proba(ratio(df, teams_home_choice, teams_away_choice))[0][1]
+    add_logo(f"https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/{league_choice.lower().replace(' ', '_')}.png")
     image_home = Image.open(f'{teams_home_choice.lower().replace(" ", "_")}.png')
     image_away = Image.open(f'{teams_away_choice.lower().replace(" ", "_")}.png')
 
