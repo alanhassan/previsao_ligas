@@ -128,7 +128,6 @@ st.markdown(f'<h1 style="color:#000000;font-size:50px;">{"Who will be the winner
 #background: rgba(240, 240, 240, 0.4)
 #background-color:#0066cc
 add_bg_from_local('background.jpg') 
-add_logo("https://raw.githubusercontent.com/alanhassan/previsao_ligas/main/bundesliga.png")
 
 
 with st.sidebar:
