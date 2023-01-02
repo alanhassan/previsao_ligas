@@ -250,11 +250,11 @@ df_rolling = df_rolling[['date', 'comp', 'home', 'gf_rolling_home',
             'pont_rolling_away', 'Points last season_away', 'FIFA_23_Overall_away']]
 
 
-df_rolling.to_excel('C:/Users/alan.hassan/Desktop/github/previsao_ligas_futebol/df_rolling.xlsx')
+df_rolling.to_excel('C:/Users/alan.hassan/Desktop/github/previsao_ligas/df_rolling.xlsx')
 
 # update no Github
 
-repo = Repo('C:/Users/alan.hassan/Desktop/github/previsao_ligas_futebol')  # if repo is CWD just do '.'
+repo = Repo('C:/Users/alan.hassan/Desktop/github/previsao_ligas')  # if repo is CWD just do '.'
 origin = repo.remote('origin')
 assert origin.exists()
 origin.fetch()
