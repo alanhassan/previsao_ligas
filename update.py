@@ -226,8 +226,8 @@ df_rolling = df_rolling_home.merge(df_rolling_away, left_on=['date', 'opponent']
 
 
 # inserindo as informações de "Points last season" e "FIFA_23_Overall"
-url_add = 'https://github.com/alanhassan/previsao_ligas_futebol/blob/main/additional.xlsx?raw=true'
-additional = pd.read_excel(url_add, index_col=0)
+#url_add = 'https://github.com/alanhassan/previsao_ligas_futebol/blob/main/additional.xlsx?raw=true'
+additional = pd.read_excel('C:/Users/alan.hassan/Desktop/github/previsao_ligas_futebol/additional.xlsx', index_col=0)
 
 df_rolling = df_rolling.merge(additional, how = 'left', left_on='team_home', right_on='team')
 df_rolling.rename(columns={"Points last season_": "Points last season_home", "FIFA_23_Overall": "FIFA_23_Overall_home"}, inplace=True)
