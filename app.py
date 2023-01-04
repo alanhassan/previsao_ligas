@@ -25,6 +25,8 @@ file = BytesIO(requests.get(url_ml).content)
 
 ml = joblib.load(file)
 
+ml.fitted_ = True
+
 # updated database with recent matches from github
 
 url_df = 'https://github.com/alanhassan/previsao_ligas/blob/main/df_rolling.xlsx?raw=true'
