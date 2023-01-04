@@ -22,7 +22,7 @@ repo = g.get_repo("alanhassan/previsao_ligas")
 url_ml = 'https://github.com/alanhassan/previsao_ligas/blob/main/best_lgbm.pkl?raw=true'
 
 file = BytesIO(requests.get(url_ml).content)
-file
+
 ml = joblib.load(file)
 
 # updated database with recent matches from github
@@ -219,3 +219,4 @@ if submit_button:
         col2.text(f'Points: {away_pont_rolling}')
         col2.text(f'Goals scored: {away_gf_rolling}')
         col2.text(f'Goals conceded: {away_ga_rolling}')
+
