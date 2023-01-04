@@ -19,7 +19,7 @@ g = Github(key)
 repo = g.get_repo("alanhassan/previsao_ligas")
 
 #get ml model from github
-url_ml = 'https://github.com/alanhassan/previsao_ligas/blob/main/best_lr_pipeline.pkl?raw=true'
+url_ml = 'https://github.com/alanhassan/previsao_ligas/blob/main/best_lgbm.pkl?raw=true'
 
 file = BytesIO(requests.get(url_ml).content)
 
