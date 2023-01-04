@@ -1,14 +1,13 @@
 import base64
 from pickle import TRUE
 import joblib
-from io import BytesIO, StringIO
+from io import BytesIO
 import requests
 import pandas as pd
 from PIL import Image
 import streamlit as st
 from github import Github
 import requests
-from bs4 import BeautifulSoup
 import os
 
 #token
