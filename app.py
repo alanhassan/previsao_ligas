@@ -22,6 +22,7 @@ repo = g.get_repo("alanhassan/previsao_ligas")
 url_ml = 'https://github.com/alanhassan/previsao_ligas/blob/main/best_lgbm.pkl?raw=true'
 
 file = BytesIO(requests.get(url_ml).content)
+file
 ml = joblib.load(file)
 
 # updated database with recent matches from github
