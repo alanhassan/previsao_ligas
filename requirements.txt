@@ -6,3 +6,4 @@ PyGithub==1.57
 openpyxl
 beautifulsoup4
 lxml
+lightgbm==3.3.3
